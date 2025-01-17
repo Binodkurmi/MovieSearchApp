@@ -3,6 +3,8 @@ import axios from 'axios';
 import MovieSearch from './components/MovieSearch';
 import MovieList from './components/MovieList';
 import FavoriteMovies from './components/FavoriteMovies';
+import './App.css';
+
 
 function App() {
   const [movies, setMovies] = useState([]);
