@@ -2,12 +2,17 @@ import React from 'react';
 
 const FavoriteMovies = ({ favorites }) => {
   return (
-    <div>
-      <h2>Favorite Movies</h2>
-      {favorites.length === 0 ? (
-        <p>No favorites yet.</p>
+    <div className="favorite-movies">
+      <h2>Your Favorite Movies</h2>
+      {favorites.length > 0 ? (
+        favorites.map((movie) => (
+          <div key={movie.imdbID} className="favorite-movie-card">
+            <h3>{movie.Title}</h3>
+            <img src={movie.Poster} alt={movie.Title} />
+          </div>
+        ))
       ) : (
-        favorites.map((movie) => <p key={movie.imdbID}>{movie.Title}</p>)
+        <p>No favorite movies yet!</p>
       )}
     </div>
   );

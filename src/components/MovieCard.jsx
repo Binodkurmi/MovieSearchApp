@@ -1,5 +1,7 @@
 import React from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
+import '../Styles/MovieCard.css'
+
 
 const MovieCard = ({ movie, toggleFavorite }) => {
   return (

@@ -5,15 +5,22 @@ import MovieList from './components/MovieList';
 import FavoriteMovies from './components/FavoriteMovies';
 import './App.css';
 
-
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [favorites, setFavorites] = useState(JSON.parse(localStorage.getItem('favorites')) || []);
 
   const fetchMovies = async (query) => {
-    const response = await axios.get(`http://www.omdbapi.com/?apikey=YOUR_API_KEY&s=${query}`);
-    setMovies(response.data.Search);
+    try {
+			const response = await axios.get(`http://www.omdbapi.com/?apikey=26b02654&s=${query}`);
+      if (response.data.Response === "True") {
+        setMovies(response.data.Search);
+      } else {
+        setMovies([]);
+      }
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    }
   };
 
   const toggleFavorite = (movie) => {
