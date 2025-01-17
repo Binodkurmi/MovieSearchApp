@@ -1,0 +1,37 @@
+/* MovieSearch Component */
+.movie-search {
+  margin: 30px auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.movie-search form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.movie-search input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.movie-search button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-search button:hover {
+  background-color: #ff5733;
+}
