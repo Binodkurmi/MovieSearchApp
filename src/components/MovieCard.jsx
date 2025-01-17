@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import React from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const MovieCard = ({ movie, toggleFavorite }) => {
   return (
